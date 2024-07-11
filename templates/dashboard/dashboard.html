@@ -1,0 +1,111 @@
+<!-- tracker/templates/tracker/dashboard.html -->
+<!--{% extends 'base.html' %}
+
+{% block title %}Dashboard - My Expense Tracker{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Dashboard</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Income</h5>
+                    <p class="card-text">{{ total_income }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Expenses</h5>
+                    <p class="card-text">{{ total_expenses }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Net Balance</h5>
+                    <p class="card-text">{{ net_balance }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+     <!--<div class="row mt-5">
+        <div class="col-md-6">
+            <canvas id="incomeChart"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Transaction History -->
+     <!--<div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Transaction History</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through transactions and display them -->
+                     <!--{% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction.date }}</td>
+                            <td>{{ transaction.category }}</td>
+                            <td>{{ transaction.type }}</td>
+                            <td>{{ transaction.amount }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Function to create a chart
+    function createChart(canvasId, data, labels, backgroundColor, title) {
+        var ctx = document.getElementById(canvasId).getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: backgroundColor,
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: title,
+                }
+            }
+        });
+    }
+
+    // Data for income chart
+    var incomeData = {{ income_data|safe }};
+    var incomeLabels = {{ income_labels|safe }};
+    var incomeColors = ["#36a2eb", "#ffce56"];
+    createChart('incomeChart', incomeData, incomeLabels, incomeColors, 'Income Distribution');
+
+    // Data for expense chart
+    var expenseData = {{ expense_data|safe }};
+    var expenseLabels = {{ expense_labels|safe }};
+    var expenseColors = ["#ff6384", "#ffce56"];
+    createChart('expenseChart', expenseData, expenseLabels, expenseColors, 'Expense Distribution');
+</script>
+{% endblock %}
+-->
